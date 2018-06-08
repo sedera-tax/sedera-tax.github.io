@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CHART</title>
+	<script src="./node_modules/chart.js/dist/Chart.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<canvas id="myChart" width="400" height="100"></canvas>
+		<canvas id="myChartPers"></canvas>
+		<canvas id="myChart_daily" height="100"></canvas>
+	</div>
+	<script>
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+				datasets: [{
+					label: '# of Votes',
+					data: [12, 19, 3, 5, 2, 3],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+					}]
+				}
+			}
+		});
+		
+		var ctxPers = document.getElementById('myChartPers').getContext('2d');
+		var myBarChart = new Chart(ctxPers, {
+			type: 'horizontalBar',
+			data: {
+				labels: [ ' Sedera ' , ' Tahina Luc ' , ' Anonymous ' , ' Koloina ' , ' Developer ' , ' Yannick Razafindrakoto ' , ' Cédric ' , ' Gui ' , ' Anonymous ' , ' Mike ' ],
+				datasets: [{
+					label: "Nombre de visites",
+					backgroundColor: '#ccc',
+					borderColor: '#666',
+					data: [269,222,167,154,67,19,16,5,5,3]
+				}]
+			},
+
+			options: {}
+		});
+		
+		var ctx = document.getElementById('myChart_daily').getContext('2d');
+		var myLineChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: [ ' 3 Feb 2018 ' , ' 4 Feb 2018 ' , ' 5 Feb 2018 ' , ' 6 Feb 2018 ' , ' 7 Feb 2018 ' , ' 8 Feb 2018 ' , ' 9 Feb 2018 ' , ' 10 Feb 2018 ' , ' 11 Feb 2018 ' , ' 12 Feb 2018 ' , ' 13 Feb 2018 ' , ' 14 Feb 2018 ' , ' 15 Feb 2018 ' , ' 16 Feb 2018 ' , ' 17 Feb 2018 ' , ' 18 Feb 2018 ' , ' 19 Feb 2018 ' , ' 20 Feb 2018 ' , ' 21 Feb 2018 ' , ' 22 Feb 2018 ' , ' 23 Feb 2018 ' , ' 24 Feb 2018 ' , ' 25 Feb 2018 ' , ' 26 Feb 2018 ' , ' 27 Feb 2018 ' , ' 28 Feb 2018 ' , ' 1 Mar 2018 ' , ' 2 Mar 2018 ' , ' 3 Mar 2018 ' , ' 4 Mar 2018 ' , ' 5 Mar 2018 ' , ' 6 Mar 2018 ' , ' 7 Mar 2018 ' , ' 8 Mar 2018 ' , ' 9 Mar 2018 ' , ' 10 Mar 2018 ' , ' 11 Mar 2018 ' , ' 12 Mar 2018 ' , ' 13 Mar 2018 ' , ' 14 Mar 2018 ' , ' 15 Mar 2018 ' , ' 16 Mar 2018 ' , ' 17 Mar 2018 ' , ' 18 Mar 2018 ' , ' 19 Mar 2018 ' , ' 20 Mar 2018 ' , ' 21 Mar 2018 ' , ' 22 Mar 2018 ' , ' 23 Mar 2018 ' , ' 24 Mar 2018 ' , ' 25 Mar 2018 ' , ' 26 Mar 2018 ' , ' 27 Mar 2018 ' , ' 28 Mar 2018 ' , ' 29 Mar 2018 ' , ' 30 Mar 2018 ' , ' 31 Mar 2018 ' , ' 1 Apr 2018 ' , ' 2 Apr 2018 ' , ' 3 Apr 2018 ' , ' 4 Apr 2018 ' , ' 5 Apr 2018 ' , ' 6 Apr 2018 ' , ' 7 Apr 2018 ' , ' 8 Apr 2018 ' , ' 9 Apr 2018 ' , ' 10 Apr 2018 ' , ' 11 Apr 2018 ' , ' 12 Apr 2018 ' , ' 13 Apr 2018 ' , ' 14 Apr 2018 ' , ' 15 Apr 2018 ' , ' 16 Apr 2018 ' , ' 17 Apr 2018 ' , ' 18 Apr 2018 ' , ' 19 Apr 2018 ' , ' 20 Apr 2018 ' , ' 21 Apr 2018 ' , ' 22 Apr 2018 ' , ' 23 Apr 2018 ' , ' 24 Apr 2018 ' , ' 25 Apr 2018 ' , ' 26 Apr 2018 ' , ' 27 Apr 2018 ' , ' 28 Apr 2018 ' , ' 29 Apr 2018 ' , ' 30 Apr 2018 ' , ' 1 May 2018 ' , ' 2 May 2018 ' , ' 3 May 2018 ' , ' 4 May 2018 ' , ' 5 May 2018 ' , ' 6 May 2018 ' , ' 7 May 2018 ' , ' 8 May 2018 ' , ' 9 May 2018 ' , ' 10 May 2018 ' , ' 11 May 2018 ' , ' 12 May 2018 ' , ' 13 May 2018 ' , ' 14 May 2018 ' , ' 15 May 2018 ' , ' 16 May 2018 ' , ' 17 May 2018 ' , ' 18 May 2018 ' , ' 19 May 2018 ' , ' 20 May 2018 ' , ' 21 May 2018 ' , ' 22 May 2018 ' , ' 23 May 2018 ' , ' 24 May 2018 ' , ' 25 May 2018 ' , ' 26 May 2018 ' , ' 27 May 2018 ' , ' 28 May 2018 ' , ' 29 May 2018 ' , ' 30 May 2018 ' , ' 31 May 2018 ' , ' 1 Jun 2018 ' , ' 2 Jun 2018 ' , ' 3 Jun 2018 ' , ' 4 Jun 2018 ' , ' 5 Jun 2018 ' , ' 6 Jun 2018 ' , ' 7 Jun 2018 ' ],
+				datasets: [{
+						label: "Nombre de visites",
+						fill: false,
+						borderColor: '#f58d87',
+						data: [1,0,0,1,0,0,0,0,0,0,0,0,0,0,86,0,224,7,2,44,0,0,0,1,0,1,0,0,0,0,0,0,0,4,2,0,0,0,0,0,0,2,0,0,11,3,0,1,0,0,0,0,2,68,19,0,0,0,3,5,0,1,1,0,0,0,0,7,0,0,0,0,29,10,3,6,0,0,0,2,0,0,0,0,0,0,0,0,0,0,39,0,0,0,0,34,1,30,0,4,26,27,7,19,17,0,0,15,13,0,8,13,0,0,35,0,3,3,27,0,0,20,10,27,3],
+						lineTension: 0
+					}]
+			},
+
+			options: {
+				legend: {
+					display: false
+				}
+			}
+		});
+	</script>
+</body>
+</html>
