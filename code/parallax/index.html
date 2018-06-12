@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PARALLAX</title>
+	<style>
+	html,
+	body {
+		min-height:100%;
+		min-width:100%;
+		height: 100%;
+		padding:0;
+		margin:0;
+		text-align:center;
+		font-family: Arial;
+		background: #cacaca;
+	}
+
+	.background {
+		width: 100%;
+		min-height: 100%;
+		background-size: contain;
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	}
+
+	.background > div {
+		background-color: #000000;
+		color: #ffffff;
+		padding: 30px 0;
+	}
+
+	.background1 {
+		background-image: url(http://placehold.it/800x450&text=Background1);
+	}
+
+	.background2 {
+		background-image: url(http://placehold.it/800x450&text=Background2);
+	}
+	.background3 {
+		background-image: url(http://placehold.it/800x450&text=Background3);
+	}
+	</style>
+</head>
+
+<body>
+	<div class="background background1">
+		<div>Some content</div>
+	</div>
+	<div class="background background2">
+		<div>A Second Page</div>
+	</div>
+	<div class="background background3">
+		<div>A Third Page</div>
+	</div>
+</body>
+</html>
