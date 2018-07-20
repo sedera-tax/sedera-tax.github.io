@@ -1,0 +1,274 @@
+/*********** Global Section **********/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+
+/*********** Navbar Section Start ***********/
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-size: 30px;
+}
+
+.navbar-inverse ul li:hover {
+    background: rgba(57, 36, 194, 0.8);
+    color: white;
+}
+
+
+/************ Navbar Section End *************/
+
+
+/************ Header Section Start ************/
+
+.header {
+    height: 100vh;
+    /*background-image: url(https://images.unsplash.com/photo-1499615767948-e6a89ef6060f?auto=format&fit=crop&w=1050&q=80);*/
+	background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-position: center top;
+	background-attachment: fixed;
+    position: relative;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+/************** Header Section End **********/
+
+
+/*********** About Me Section Start ********/
+
+#about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #5a5a5a;
+    background-image: url(https://images.unsplash.com/photo-1467703834117-04386e3dadd8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2de85761d45711c4109ba4f215b6e21e&auto=format&fit=crop&w=1350&q=80);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+	background-attachment: fixed;
+}
+
+.featurette {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+    .featurette-heading {
+        font-size: 30px;
+    }
+}
+
+
+/*********** About Me Section End **********/
+
+
+/******** My Portfolio Section Start *******/
+
+#portfolio {
+    background-image: url(https://images.unsplash.com/photo-1497892597262-2983614aa886?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2051e3b8338218a0f163b9a6ab48bb84&auto=format&fit=crop&w=1350&q=80);
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    position: relative;
+	background-attachment: fixed;
+}
+
+.project {
+    transition: transform .3s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+
+/********* My Portfolio Section End ********/
+
+/******** My CV Section Start *******/
+
+#cv {
+	background-color: #222;
+	padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/********* My CV Section End ********/
+
+/********* Footer Section Start ************/
+
+footer #footer-above {
+    background-image: url(https://images.unsplash.com/photo-1495277493816-4c359911b7f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cea505d70dc1770c4dd470ff9715ac36&auto=format&fit=crop&w=1346&q=80);
+    background-size: cover;
+    background-position: center;
+	background-attachment: fixed;
+    color: #fff;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 2em;
+}
+
+#footer-above {
+    padding-top: 50px;
+    width: 80%;
+}
+
+#footer-above div {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#footer-above ul {
+    padding: 0;
+}
+
+#footer-above li {
+    display: inline;
+}
+
+#footer-below {
+    color: #fff;
+    font-size: 1.0em;
+    padding: 25px 0;
+    background-color: #000;
+    background-position: center;
+    text-align: center;
+}
+
+.button {
+    color: #fff;
+    border: solid 2px #000;
+    border-radius: 70%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 48px;
+    -webkit-transitional: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.button:hover {
+    border: solid 2px rgb(21, 102, 214);
+    color: #2998E4;
+}
+
+
+/********* Footer Section End **************/
